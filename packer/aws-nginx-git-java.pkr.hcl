@@ -60,7 +60,7 @@ provisioner "shell" {
 }
 
 post-processor "shell-local" {
-    # This line succeeded previously, but we'll also clean it up for safety
+    
     inline = ["echo AMI build id finished for Nginx"]
 }
 
