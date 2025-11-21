@@ -12,9 +12,7 @@ required_plugins {
 }
 
 #-----------------------------------------------
-
-source: how the AMI is built for nginx and git
-
+# source: how the AMI is built for nginx and git
 #-----------------------------------------------
 
 source "amazon-ebs" "nginx-git" {
@@ -36,9 +34,7 @@ ami_virtualization_type = "hvm"
 }
 
 #------------------------------
-
-build: source + provisioning
-
+# build: source + provisioning
 #------------------------------
 
 build {
@@ -60,7 +56,7 @@ provisioner "shell" {
 }
 
 post-processor "shell-local" {
-    
+
     inline = ["echo AMI build id finished for Nginx"]
 }
 
